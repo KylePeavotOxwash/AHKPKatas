@@ -10,7 +10,7 @@ Before you start:
 
 ### First exercise
 1. In a test-first manner, create a simple class StringCalculator
-   with a method public int Add(string numbers)
+   with a method public int add(string numbers)
 2. The method can take 0, 1 or 2 numbers, and will return their sum
    (for an empty string it will return 0)
    for example
