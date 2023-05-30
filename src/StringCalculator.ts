@@ -1,7 +1,11 @@
-export class StringCalculator{
+export class StringCalculator {
+    static add(numbers: string): number {
+        if (numbers === "") {
+            return 0;
+        }
 
-    add(numbers: string): number {
-        throw new Error('not implemented')
+        const [firstNumber, possiblySecondNumber] = numbers.split(",");
+
+        return Number(firstNumber) + Number(possiblySecondNumber ?? 0);
     }
-
 }
