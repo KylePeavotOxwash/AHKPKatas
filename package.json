@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "run": "node --loader ts-node/esm src/index.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.4",
+    "ts-node": "^10.9.1"
+  }
+}
