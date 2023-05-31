@@ -31,7 +31,7 @@ describe('StringCalculator', () => {
         });
     });
 
-    xdescribe('Exercise three', () => {
+    describe('Exercise three', () => {
         it('should handle new lines between numbers instead of commas', () => {
             expect(stringCalculator.add("1\n2,3,4\n5")).toBe(15);
         });
