@@ -2,11 +2,13 @@ export class StringCalculator{
 
     add(numbers: string): number {
 
-        const numbersArray = numbers.split(',')
+        const stringNumbersArray = numbers.split(',')
 
-        const sum = numbersArray.length > 1 ? +numbersArray[0] + +numbersArray[1] : +numbersArray[0]
+        const numbersArray = stringNumbersArray.map((number) => Number(number))
 
-        return numbers ? sum : 0
+        return numbersArray.reduce((sum, nextNumber) => sum + nextNumber, 0)
+
+
     }
 
 }
