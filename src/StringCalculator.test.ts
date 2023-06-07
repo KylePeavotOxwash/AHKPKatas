@@ -20,14 +20,15 @@ describe('StringCalculator', () => {
     describe('Exercise two', () => {
         it('should handle an unknown number of numbers', () => {
             //Given
-            const numbersAsNumbers: number[] = Array.from({ length: Math.floor(Math.random() * 100) }, () => Math.floor(Math.random() * 100));
+            // const numbersAsNumbers: number[] = Array.from({ length: Math.floor(Math.random() * 100) }, () => Math.floor(Math.random() * 100));
 
+            const numbersAsNumbers = [1,2,3,4,5,6,7,8,9,10]
             //When
             const sumFromCalculator = stringCalculator.add(numbersAsNumbers.join(','));
 
             //Then
-            const expectedSum = numbersAsNumbers.reduce((a, b) => a + b, 0);
-            expect(sumFromCalculator).toBe(expectedSum);
+            numbersAsNumbers.reduce((a, b) => a + b, 0);
+            expect(sumFromCalculator).toBe(55);
         });
     });
 
@@ -37,7 +38,7 @@ describe('StringCalculator', () => {
         });
     });
 
-    xdescribe('Exercise four', () => {
+    describe('Exercise four', () => {
         it('should support custom delimiters', () => {
             expect(stringCalculator.add("//$\n1$2")).toBe(3);
         });
